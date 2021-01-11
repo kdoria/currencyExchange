@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <title>Currency Exchange</title>
+</head>
+<body>
+    <div class="app">
+        <div class="back-img">
+        </div>
+        <div class="title">
+            <h1>Currency Exchange Rates</h1>
+            <p>Discover your money worth in other currencies</p>
+        </div>
+        <!-- warning -->
+        <div class="alert alert-dismissible alert-warning" id="warning-div">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <h4 class="alert-heading">Warning!</h4>
+            <p class="mb-0"></p>
+        </div>
+        <div class="container">
+            <div class="dollar">
+                <h2>US Dollar</h2>
+                <div class="form-group">
+                    <label class="control-label">Do you have an amount in mind?</label>
+                    <div class="form-group">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">$</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="currency-field" max='999999999'>
+                            <div class="input-group-append">
+                                <span class="input-group-text">,00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <div class="form-group">
+                            <label class="col-form-label" for="select-currency">Select the currency to Exchange</label>
+                            <input type="text" class="form-control" placeholder="" id="select-currency">
+                        </div>
+                        <button type="button" class="btn btn-success" id="summit-currency">Summit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="other-currencies">
+            </div>            
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="./static/js/apikeys.js"></script>
+    <script type="module" src="./static/js/dollar-exchange.js"></script>
+</body>
+</html>
